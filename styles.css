@@ -225,7 +225,7 @@ button{
 .bg-photo {
   background:
     linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    url('Foto\'s/bg.JPG');
+    url('Fotos/bg.JPG');
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
