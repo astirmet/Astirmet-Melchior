@@ -222,26 +222,9 @@ button{
   letter-spacing: .02em;
 }
 
-.bg-photo {
-  background:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    url('fotos/bg.JPG');
-  background-size: cover;
-  background-position: center top;
-  background-attachment: fixed;
-}
 
 /* ===== P3 Layout ===== */
 
-.bg-photo {
-  background:
-    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-    url("/Astirmet-Melchior/fotos/bg.jpeg");
-  background-size: cover;
-  background-position: center 20%;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
 
 .love-wrapper {
   display: flex;
@@ -287,15 +270,13 @@ button{
    ========================= */
 
 /* BG alleen op pagina 3 */
-body.p3.bg-photo{
+body.p3{
   background:
     linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)),
-    url("foto's/bg.jpeg");
+    url("fotos/bg.jpg");
   background-size: cover;
+  background-position: center top;
   background-repeat: no-repeat;
-
-  /* hiermee “schuif” je de foto zodat de bloemen in beeld komen */
-  background-position: center top; /* probeer ook: center 10% / center 0% */
   min-height: 100vh;
 }
 
@@ -342,19 +323,27 @@ body.p3.bg-photo{
   top: 135px;
   left: 50%;
   transform: translateX(-50%);
-
   width: 85%;
   max-width: 420px;
-
   padding: 20px 30px;
-  border-radius: 999px;
+  border-radius: 30px;
   background: hotpink;
   color: white;
-  font-weight: 600;
-  font-size: 18px;
   text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
 }
 
+.countdown-label {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+
+#countdown {
+  font-size: 20px;
+  font-weight: 700;
+}
 
 /* ===== Pagina 2: video background ===== */
 body.p2-video{
@@ -382,32 +371,4 @@ body.p2-video .bg-overlay{
 body.p2-video .main{
   position: relative;
   z-index: 1;
-}
-
-
-.p3-countdown {
-  position: fixed;
-  top: 135px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 85%;
-  max-width: 420px;
-  padding: 20px 30px;
-  border-radius: 30px;
-  background: hotpink;
-  color: white;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,.4);
-}
-
-.countdown-label {
-  font-size: 14px;
-  opacity: 0.85;
-  margin-bottom: 6px;
-  letter-spacing: 0.05em;
-}
-
-#countdown {
-  font-size: 20px;
-  font-weight: 700;
 }
