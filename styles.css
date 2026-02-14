@@ -225,7 +225,7 @@ button{
 .bg-photo {
   background:
     linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    url('Astirmet-Melchior/Fotos/bg.JPG');
+    url('foto\'s/bg.JPG');
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
