@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Voor Mell</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="p3 bg-photo">
+  <main class="p3-wrap">
+    <section class="p3-phone">
+
+   <div class="p3-countdown">
+  <div class="countdown-label">Yaaaaay! 
+
+    <br>Wanneer ik je weer zie:
+
+  </div>
+  <div id="countdown"></div>
+</div>
+
+
+      <div class="p3-hero">
+        <img src="foto's/Frame 1.svg" alt="wij samen groot" />
+      </div>
+
+      <div class="p3-grid">
+        <img src="foto's/f1.jpeg" alt="">
+        <img src="foto's/f2.jpeg" alt="">
+        <img src="foto's/f3.jpeg" alt="">
+        <img src="foto's/f4.jpeg" alt="">
+        <img src="foto's/f5.jpeg" alt="">
+        <img src="foto's/f6.jpeg" alt="">
+        <img src="foto's/f7.jpeg" alt="">
+        <img src="foto's/f8.jpg" alt="">
+      </div>
+
+    </section>
+  </main>
+
+
+  <script>
+    const countdownEl = document.getElementById("countdown");
+
+
+    const arrivalDate = new Date("2026-02-19T18:00:00");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = arrivalDate - now;
+
+      if (diff <= 0) {
+        countdownEl.textContent = "";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      countdownEl.textContent = ` ${days}d ${hours}u ${minutes}m ${seconds}s `;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>

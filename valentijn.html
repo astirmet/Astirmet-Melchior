@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mellie</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="p2-video"></body>
+
+<!-- video achtergrond -->
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="foto's/bg-hart.mp4" type="video/mp4" />
+  </video>
+
+  <!-- (optioneel) donkere overlay voor leesbaarheid -->
+  <div class="bg-overlay"></div>
+
+  <main class="main">
+    <div class="card">
+      <h1>Hi mellie</h1>
+
+      <p>
+      wiiiiiiil je mijn valentijn zijn? :))
+      </p>
+
+      <div class="row">
+        <button id="yes">Ja &lt;3</button>
+        <button id="no">Nee &gt;:(</button>
+      </div>
+
+      <div class="tiny" id="hint"></div>
+    </div>
+  </main>
+
+<script>
+  const yesBtn = document.getElementById("yes");
+  const noBtn = document.getElementById("no");
+  const hint = document.getElementById("hint");
+
+  const noMessages = [
+    "euhm?",
+    "Hallooohoooo",
+    "oke klaar nu",
+    "ik geef je geen andere optie"
+  ];
+
+  let noCount = 0;
+
+  function moveNoButton() {
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 140 - 70;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+  }
+
+  noBtn.addEventListener("click", () => {
+
+    // Laat volgende tekst zien
+    hint.textContent = noMessages[noCount];
+
+    // Als we bij de laatste zin zijn:
+    if (noCount === noMessages.length - 1) {
+      
+      // Nee knop verbergen
+      noBtn.style.display = "none";
+
+      // Ja knop groot maken
+      yesBtn.style.width = "100%";
+      yesBtn.style.transform = "scale(1.1)";
+      yesBtn.style.fontSize = "20px";
+      yesBtn.textContent = "duuuuuuuh";
+
+      return; // stop verdere beweging
+    }
+
+    noCount++;
+    moveNoButton();
+  });
+
+  yesBtn.addEventListener("click", () => {
+    window.location.href = "love.html";
+  });
+</script>
+
+
+</body>
+</html>
