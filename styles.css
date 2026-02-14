@@ -273,7 +273,7 @@ button{
 body.p3{
   background:
     linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)),
-    url("fotos/bg.jpg");
+    url("fotos/bg.jpeg");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
